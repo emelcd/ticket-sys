@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}
+.app {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  display: grid;
+  background-color: rgb(231, 231, 231);
+  overflow-y: auto;
+  padding: 1rem;
+  grid-gap: 1rem;
+  width: 88%;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  margin: auto;
+}
+.button {
+  padding: 10px;
+  background-color: #00b2ff;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.container select {
+  width: 100%;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.container select option {
+  text-align: center;
+}
+.container input {
+  width: 100%;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.container textarea {
+  width: 100%;
+  height: 130px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  resize: none;
+
+}
+
+.time {
+  color: #00b2ff;
+  float: right;
+}
+
+.message {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 3px;
+  margin: 1rem;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+button {
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+  background: none;
+
+}
+
+.trash {
+  font-size: 1.5rem;
+}

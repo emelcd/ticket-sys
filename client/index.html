@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket System 📝</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="title">Ticket System</h1>
+    <div class="app" id="app">
+        <button v-if="state" class="button" v-on:click="changeState">Add Ticket ➕</button>
+        <form class="container" v-if="!state" v-on:submit.prevent="addTicket">
+            <input name="user" placeholder="Name">
+            <textarea name="message" placeholder="Message"></textarea>
+            <select name="priority">
+                <option value="3">🔴 High</option>
+                <option value="2" selected>🔵 Medium</option>
+                <option value="1">🟢 Low</option>
+            </select>
+            <button class="button">Submit</button>
+        </form>
+        <div class="container form" v-for="msg in message">
+            <div >
+                <h5 class="user">
+                    {{msg.user}}
+                    <span class="trash">
+                        🗑
+                    </span>
+                </h5>
+                <span class="time">
+                    {{msg.date.toString().substr(5,5)}}
+                    {{msg.date.toString().substr(11, 2)}}:{{msg.date.toString().substr(14, 2)}}
+                </span>
+                <hr />
+                <p class="message">
+                    {{msg.message}}
+                </p>
+                <div class="actions">
+                    <button v-if="msg.priority === 3">🔴 High</button>
+                    <button v-if="msg.priority === 2">🔵 Medium</button>
+                    <button v-if="msg.priority === 1">🟢 Low</button>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
